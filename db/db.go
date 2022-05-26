@@ -8,7 +8,7 @@ import (
 )
 
 func DbConnection() *mongo.Collection {
-	const uri = "mongodb://localhost:27017"
+	const uri = "mongodb://mongo:27017"
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 	if err != nil {
 		panic(err)
